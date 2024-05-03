@@ -10,7 +10,7 @@ const ListComment = props => {
         const getInfo = async () => {
             try {
                 const res = await axios.get(
-                    `${process.env.REACT_APP_URL}api/users/find/` + props.data.id
+                    `${process.env.REACT_APP_URL}/api/users/find/` + props.data.id
                 )
                 setInfo(res.data)
             } catch (err) {
@@ -19,6 +19,7 @@ const ListComment = props => {
         }
         getInfo();
     }, [props])
+    console.log(info)
     const NowLogin = new Date();
     const LastLogin = new Date(props.data.timestamp);
     const millisecondsInMinute = 60000;
