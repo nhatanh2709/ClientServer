@@ -25,7 +25,7 @@ const ListComment = props => {
     const millisecondsInMinute = 60000;
     const distance = Math.round((NowLogin - LastLogin) / millisecondsInMinute)
     return (
-        <div className='body'>
+        <div className='comment'>
             <div className='comment-session'>
                 <div className='post-comment'>
                     <div className='list'>
