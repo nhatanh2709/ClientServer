@@ -20,14 +20,14 @@ function App() {
         <Route exact path='/' element={
           user ? <Home /> : <Navigate to="/login" />}
         />
-        <Route path='/register' element={
+        <Route exact path='/register' element={
           !user ? <Register /> : <Navigate to="/" />}
         />
-        <Route path='/login' element={
+        <Route exact path='/login' element={
           !user ? <Login /> : <Navigate to="/" />}
         />
 
-        <Route path='/newPassword' element={
+        <Route exact path='/newPassword' element={
           !user ? <ForgotPassword /> : <Navigate to="/" />}
         />
         <Route path='/:category/search/:keyword' element={<Catalog />} />
